@@ -2,8 +2,11 @@ package com.student.restapi.controller;
 
 import java.util.List;
 
+import com.student.restapi.entity.Student;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.student.restapi.entity.Teacher;
@@ -21,5 +24,12 @@ public class TeacherController {
 		return teacher;
 		
 	}
+
+
+    @PostMapping("/teachers/add")
+    public void createTeacher(@RequestBody Teacher teacher) {
+
+        repo.save(teacher);
+    }
 
 }
