@@ -17,17 +17,17 @@ public class EmployeeController {
 	EmployeeRepository repo;
 	
 	@GetMapping("/employees")
-	public List<Employee> getAllTeachers(){
-		List<Employee> teacher = repo.findAll();
-		return teacher;
+	public List<Employee> getAllEmployees(){
+		List<Employee> employeeList = repo.findAll();
+		return employeeList;
 		
 	}
 
 
     @PostMapping("/employees/add")
-    public void createTeacher(@RequestBody Employee teacher) {
+    public void createEmployee(@RequestBody Employee employee) {
 
-        repo.save(teacher);
+        repo.save(employee);
     }
 
 }
