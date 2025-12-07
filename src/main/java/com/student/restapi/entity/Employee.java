@@ -8,8 +8,8 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "teacher")
-public class Teacher {
+@Table(name = "employee")
+public class Employee {
 	
 	
 	@Id
@@ -28,13 +28,13 @@ public class Teacher {
 	@Column(name = "employee_deprt")
 	private String employee_deprt;
 	
-	public Teacher() {
+	public Employee() {
 		
 	}
 	
 	
-	public Teacher(String employee_name, String employee_id, String employee_joined_date, int employee_age,
-			String employee_designation, String employee_deprt) {
+	public Employee(String employee_name, String employee_id, String employee_joined_date, int employee_age,
+					String employee_designation, String employee_deprt) {
 		super();
 		this.employee_name = employee_name;
 		this.employee_id = employee_id;
